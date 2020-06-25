@@ -4,7 +4,7 @@
 
 
 Two cloud instances have been provisioned for you: `frontend` and `data-api`.
-You can log in as user `playground`, with password `JunePanda` 🐼.
+You can log in as user `playground`, with password `ILovePanda` 🐼.
 
 **frontend** hosts a webapp (`frontend.py`) that listens for incoming connections from the internet, and makes API calls to the other application: **data-api** also hosts a webapp (`data.py`) that exposes a REST API to manage users and sessions, and persist them on disk (`data-api.db`, an sqlite3 DB).  
 Upon startup, `data-api` registers itself as a service with Consul; `frontend` queries Consul on startup for the address and port of a service called "data-api".
@@ -86,7 +86,7 @@ In the remainder of this DevOps Playground, we will change the existing setup to
 Let's start by registering a Service Mesh _Proxy_ for `data-api`:  
 * Log into the `data-api` instance;
 * Become root—it'll be easier;
-  * `sudo -i`, `[Enter]`, `JunePanda`, `[Enter]`
+  * `sudo -i`, `[Enter]`, `ILovePanda`, `[Enter]`
 * Create a new JSON file in `/etc/consul.d`
   * e.g. `vim /etc/consul.d/data-api-proxy.json`
   * if you prefer Nano, please simply disconnect and you have hereby forfeited any pizzas you may have won;
@@ -152,7 +152,7 @@ We'll do it a bit differently, to showcase the various configuration methods for
 Let's start by registering the service `frontend` which hithereto Consul was unaware of:  
 * Log into the `frontend` instance;
 * Become root—it'll be easier;
-  * `sudo -i`, `[Enter]`, `JunePanda`, `[Enter]`
+  * `sudo -i`, `[Enter]`, `ILovePanda`, `[Enter]`
 * Create a new JSON file in `/etc/consul.d/frontend.json`
   * e.g. `vim /etc/consul.d/frontend.json`
 * set the following content:
@@ -229,7 +229,7 @@ Now that we have our secure tunnel set up from the `frontend` to the `data-api` 
 
 * Log into the `frontend` instance;
 * Become root—it'll be easier;
-  * `sudo -i`, `[Enter]`, `JunePanda`, `[Enter]`
+  * `sudo -i`, `[Enter]`, `ILovePanda`, `[Enter]`
 * Edit the bottom of `frontend.py`
   * e.g. `vim /opt/dpg/frontend.py`, then `shift+G`
 * change the following content:
@@ -273,7 +273,7 @@ As noted, it is still possibly to directly connect to `data-api`. Let's change t
 
 * Log into the `data-api` instance;
 * Become root—it'll be easier;
-  * `sudo -i`, `[Enter]`, `JunePanda`, `[Enter]`
+  * `sudo -i`, `[Enter]`, `ILovePanda`, `[Enter]`
 * Edit the last line of `data.py`
   * e.g. `vim /opt/dpg/data.py`, then `shift+G`
 * change the last line:
